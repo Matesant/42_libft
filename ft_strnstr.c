@@ -6,7 +6,7 @@
 /*   By: matesant <matesant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:53:07 by matesant          #+#    #+#             */
-/*   Updated: 2023/08/04 20:12:47 by matesant         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:08:39 by matesant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *str, const char *substr, size_t n)
 	{
 		if (ft_memcmp(str, substr, len) == 0)
 			return ((char *)str);
-	str++;
+		str++;
 	}
 	return (NULL);
 }

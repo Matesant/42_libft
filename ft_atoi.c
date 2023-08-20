@@ -6,7 +6,7 @@
 /*   By: matesant <matesant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 16:22:05 by matesant          #+#    #+#             */
-/*   Updated: 2023/08/06 11:35:31 by matesant         ###   ########.fr       */
+/*   Updated: 2023/08/15 15:24:10 by matesant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,25 @@
 
 int	ft_atoi(const char *str)
 {
-	int	indx;
-	int	sig;
-	int	mult;
+	int	index;
+	int	sign;
+	int	numbers;
 
-	indx = 0;
-	mult = 0;
-	sig = 1;
-	while ((str[indx] == ' ') || (str[indx] >= 9 && str[indx] <= 13))
-		indx++;
-	if (str[indx] == '-' || str[indx] == '+')
+	index = 0;
+	numbers = 0;
+	sign = 1;
+	while ((str[index] == ' ') || (str[index] >= 9 && str[index] <= 13))
+		index++;
+	if (str[index] == '-' || str[index] == '+')
 	{
-		if (str[indx] == '-')
-			sig *= -1;
-		indx++;
+		if (str[index] == '-')
+			sign *= -1;
+		index++;
 	}
-	while (str[indx] >= '0' && str[indx] <= '9')
+	while (str[index] >= '0' && str[index] <= '9')
 	{
-		if (str[indx] == '-' || str[indx] == '+')
-			return (0);
-		mult = mult * 10 + (str[indx] - '0');
-		indx++;
+		numbers = numbers * 10 + (str[index] - '0');
+		index++;
 	}
-	return (mult * sig);
+	return (numbers * sign);
 }

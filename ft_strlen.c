@@ -6,18 +6,18 @@
 /*   By: matesant <matesant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 15:51:13 by matesant          #+#    #+#             */
-/*   Updated: 2023/08/03 17:02:59 by matesant         ###   ########.fr       */
+/*   Updated: 2023/08/16 12:34:37 by matesant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *s)
 {
 	int	len;
 
 	len = 0;
-	while (str[len])
+	while (s[len])
 	{
 		len++;
 	}

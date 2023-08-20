@@ -6,7 +6,7 @@
 /*   By: matesant <matesant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 09:47:21 by matesant          #+#    #+#             */
-/*   Updated: 2023/08/06 12:14:15 by matesant         ###   ########.fr       */
+/*   Updated: 2023/08/13 15:21:35 by matesant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,25 @@ static int	ft_count_words(char const *s, char c)
 	return (words);
 }
 
+static void	ft_erase(char **array)
+{
+	int	count;
+
+	count = 0;
+	if (!array)
+		return ;
+	while (array[count])
+	{
+		if (array[count] != NULL)
+		{
+			free(array[count]);
+			array[count] = NULL;
+		}
+		count++;
+	}
+	free(array);
+}
+
 static char	**ft_allocate(char **array, const char *s, char c)
 {
 	int		word_len;
@@ -43,6 +62,11 @@ static char	**ft_allocate(char **array, const char *s, char c)
 		while (s[word_len] != c && s[word_len])
 			word_len++;
 		array[i] = (char *)ft_calloc((word_len + 1), sizeof(char));
+		if (array[i] == NULL)
+		{
+			ft_erase(array);
+			return (NULL);
+		}
 		ft_strlcpy(array[i], s, word_len + 1);
 		i++;
 		while (*s != c && *s)
@@ -67,6 +91,5 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (*s == c && *s)
 		s++;
-	ft_allocate(array, s, c);
-	return (array);
+	return (ft_allocate(array, s, c));
 }

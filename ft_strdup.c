@@ -6,7 +6,7 @@
 /*   By: matesant <matesant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 19:10:29 by matesant          #+#    #+#             */
-/*   Updated: 2023/08/04 19:48:26 by matesant         ###   ########.fr       */
+/*   Updated: 2023/08/15 15:19:21 by matesant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strdup(const char *str)
 {
-	unsigned int	len;
+	size_t			len;
 	char			*nstr;
 
-	len = ft_strlen(str);
-	nstr = ft_calloc((len + 1), sizeof(char));
+	len = ft_strlen(str) + 1;
+	nstr = (char *)ft_calloc(len, sizeof(char));
 	if (!nstr)
-		return (0);
-	nstr = ft_memcpy(nstr, str, len);
+		return (NULL);
+	ft_strlcpy(nstr, str, len);
 	return (nstr);
 }
