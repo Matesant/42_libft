@@ -1,3 +1,3 @@
 # 42_libft
 
-d
+The very first project of école 42!
