@@ -7,15 +7,15 @@
 <br>
 
 ```asciidoc
-At École 42, we are encouraged to reimplement functionalities from scratch.
-This project serves the purpose of deepening our understanding
-of functions that already exist in standard libraries.
-Similar to the initial project, we start by creating fundamental
-versions of these functions, adhering to explicit limitations.
-As we advance through the curriculum, we are permitted to enhance
-our library by adding extra functions and features to our Libft.
-This iterative process not only solidifies our understanding of core concepts
-but also fosters creativity and the ability to expand on existing knowledge.
+          At École 42, we are encouraged to reimplement functionalities from scratch.
+          This project serves the purpose of deepening our understanding
+          of functions that already exist in standard libraries.
+          Similar to the initial project, we start by creating fundamental
+          versions of these functions, adhering to explicit limitations.
+          As we advance through the curriculum, we are permitted to enhance
+          our library by adding extra functions and features to our Libft.
+          This iterative process not only solidifies our understanding of core concepts
+          but also fosters creativity and the ability to expand on existing knowledge.
 ```
 </div>
 <br>
