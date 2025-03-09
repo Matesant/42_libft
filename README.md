@@ -55,6 +55,7 @@ $ make bonus
 ```
 make
 gcc ./main.c libft.a
+./a.out
 ```
 
 This project have been tested with (https://github.com/gemartin99/Push-Swap-Tester).
