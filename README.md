@@ -52,4 +52,9 @@ $ make bonus
 ```
 
 ## Testing
+```
+make
+gcc ./main.c libft.a
+```
+
 This project have been tested with (https://github.com/gemartin99/Push-Swap-Tester).
