@@ -1,4 +1,4 @@
-<div align="center">
+# Push swap
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,39 +14,42 @@
 </body>
 </html>
 
-<h1>🚀 Libft 🚀</h1>
 
-> The aim of this project is to get to know and recode some of the general functions fund in C, which will be used in future projects.
+<h1 align="center">Making your own C library</h1>
 
-<div style="text-align: center;">
-    <pre>
-          At École 42, we are encouraged to reimplement functionalities from scratch.
-          This project serves the purpose of deepening our understanding
-          of functions that already exist in standard libraries.
-          Similar to the initial project, we start by creating fundamental
-          versions of these functions, adhering to explicit limitations.
-          As we advance through the curriculum, we are permitted to enhance
-          our library by adding extra functions and features to our Libft.
-          This iterative process not only solidifies our understanding of core concepts
-          but also fosters creativity and the ability to expand on existing knowledge.
-    </pre>
-</div>
+The first project in the École 42 curriculum: building your own C library as a foundation for future projects!
 
+## About
+At École 42, we are encouraged to reimplement core functionalities from scratch. This project helps us gain a deeper understanding of standard library functions by rebuilding them under specific constraints. Initially, we focus on fundamental versions, but as we progress through the curriculum, we refine and expand our Libft with additional features. This hands-on approach strengthens our grasp of key concepts while fostering creativity and the ability to build upon existing knowledge.
 
-<summary><h2>🚲 Usage:</h2></summary>
+## Requirements
+The functions are written in __C language__ and need the `gcc` compiler.
 
-> The library is written in C language and needs the `gcc` compiler to run.
+## Instructions
 
-- `make` - compiles all mandatory functions
-- `make bonus` - Compiles all bonus functions
-- `make re` - cleans everything and recompiles all files
-- `make clean` - removes all object files
-- `make fclean` - cleans everything
+### 1. Compiling the archives
 
-</details>
-<details>
-<summary><h2>🌀 Testing:</h2></summary>
+To compile the project, go to its path and run:
 
-> You have the option to either create your own tests or utilize third-party tests, such as:
+For __mandatory__ :
+```
+$ make
+```
+### 2. Cleaning all binary (.o) and executable files (.a)
 
-  * [francinette](https://github.com/xicodomingues/francinette) 
+To delete all files generated with make, go to the path and run:
+```
+$ make fclean
+```
+## Bonus
+The bonus involves developing a checker to validate the output of the push swap program. This tool verifies that the sorting algorithm produces the correct results by ensuring that the final order of elements in the stacks meets the expected criteria.
+
+To compile the bonus:
+
+For __bonus__ :
+```
+$ make bonus
+```
+
+## Testing
+This project have been tested with (https://github.com/gemartin99/Push-Swap-Tester).
